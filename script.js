@@ -6,8 +6,8 @@ let count = 0;
 
 let user = prompt("Name: ", "Valay");
 let greeting = `Welcome ${user}, Glad you are Here!`;
-welcomeEl.innerText = greeting;
-welcomeEl.innerText += "🫦";
+welcomeEl.textContent = greeting;
+welcomeEl.textContent += "🫦";
 
 //increment function
 function increment() {

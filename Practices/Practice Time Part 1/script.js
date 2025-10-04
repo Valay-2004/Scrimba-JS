@@ -4,6 +4,8 @@ let lastName = "Bhaladhare";
 let fullName = firstName + " " + lastName;
 console.log(fullName);
 
+console.log("");
+console.log("Second Problem ->");
 
 // Second Practice Problem
 let greeting = "Hi there";
@@ -14,6 +16,8 @@ function greets() {
 }
 greets();
 
+console.log("");
+console.log("Third Problem");
 
 // Third Practice Problem
 let myPoints = 3;
@@ -32,3 +36,13 @@ remove1Point();
 remove1Point();
 // Call the functions to that the line below log out 10
 console.log(myPoints);
+console.log("");
+
+console.log("Fourth Problem");
+// Fourth Practice Problem
+console.log("2" + 2) // --> "22"
+console.log(11+7) // --> 18
+console.log(6 + "5") // --> "65"
+console.log("My points: " + 5 + 9) // --> "My points: 59"
+console.log(2+2) // --> 4
+console.log("11" + "14") // --> "1114"

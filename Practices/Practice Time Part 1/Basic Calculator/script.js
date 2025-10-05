@@ -13,11 +13,13 @@ let sumEl = document.getElementById("sum-el");
 // "Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el"
 const add = () => {
   console.log("add clicked");
-  sumEl.textContent = num1 + num2;
+  let result = num1 + num2;
+  sumEl.textContent = "Sum: " + result;
 };
 const subtract = () => {
   console.log("subtract clicked");
-  sumEl.textContent = num1 - num2;
+  let result = num1 - num2;
+  sumEl.textContent = "Subtraction Result: " + result;
 };
 const divide = () => {
   try {
@@ -25,7 +27,9 @@ const divide = () => {
       throw new Error("Cannot divide by zero.");
     }
     console.log("divide clicked");
-    sumEl.textContent = num1 / num2;
+    let result = num1 / num2;
+    sumEl.textContent = "Division result: " + result;
+
   } catch (error) {
     console.error("Division Error: ", error.message);
     return "Error: " + error.message;
@@ -33,5 +37,6 @@ const divide = () => {
 };
 const multiply = () => {
   console.log("multiply clicked");
-  sumEl.textContent = num1 * num2;
+  let result = num1 * num2;
+  sumEl.textContent = "Multiplication result: " + result;
 };

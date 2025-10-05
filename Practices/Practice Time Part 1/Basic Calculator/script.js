@@ -5,30 +5,6 @@ document.getElementById("num2-el").textContent = num2;
 let sumEl = document.getElementById("sum-el");
 
 // Create four functions: add(), subtract(), divide(), multiply()
-const add = (a, b) => {
-    console.log("add clicked");
-    
-    sumEl.textContent = a+b;
+function add() {
+    sumEl.textContent = num1 + num2;
 }
-const subtract = (a, b) => {
-    sumEl.textContent = a - b;
-}
-const divide = (a, b) => {
-    try {
-        if(b == 0){
-            throw new Error("Cannot divide by zero.");
-        }
-        sumEl.textContent = a/b;
-    } catch (error) {
-        console.error("Division Error: ", error.message);
-        return "Error: " + error.message;
-    }
-}
-const multiply = (a, b) => {
-    sumEl.textContent = a * b;
-}
-
-add(num1, num2);
-subtract(num1, num2);
-divide(num1, num2);
-multiply(num1, num2);

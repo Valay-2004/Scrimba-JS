@@ -38,8 +38,8 @@ remove1Point();
 console.log(myPoints);
 console.log("");
 
-console.log("Fourth Problem");
 // Fourth Practice Problem
+console.log("Fourth Problem");
 console.log("2" + 2) // --> "22"
 console.log(11+7) // --> 18
 console.log(6 + "5") // --> "65"

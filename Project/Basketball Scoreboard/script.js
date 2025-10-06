@@ -13,39 +13,63 @@ const guest3 = document.getElementById("guest-3");
 const guestScoreEl = document.getElementById("guest-score");
 let guestScore = 0;
 
-// reset button
-const reset = document.getElementById("reset");
-const addOneHome = () => {
-    homeScore += 1;
-    homeScoreEl.textContent = homeScore;
-}
+// // reset button
+// const reset = document.getElementById("reset");
+// const addOneHome = () => {
+//     homeScore += 1;
+//     homeScoreEl.textContent = homeScore;
+// }
 
-home2.addEventListener("click", function() {
-    homeScore += 2;
-    homeScoreEl.textContent = homeScore;
-})
+// home2.addEventListener("click", function() {
+//     homeScore += 2;
+//     homeScoreEl.textContent = homeScore;
+// })
 
-home3.addEventListener("click", function() {
-    homeScore += 3;
-    homeScoreEl.textContent = homeScore;
-})
+// home3.addEventListener("click", function() {
+//     homeScore += 3;
+//     homeScoreEl.textContent = homeScore;
+// })
 
-guest1.addEventListener("click", function() {
-    guestScore += 1;
-    guestScoreEl.textContent = guestScore;
-})
-guest2.addEventListener("click", function() {
-    guestScore += 2;
-    guestScoreEl.textContent = guestScore;
-})
-guest3.addEventListener("click", function() {
-    guestScore += 3;
-    guestScoreEl.textContent = guestScore;
-})
+// guest1.addEventListener("click", function() {
+//     guestScore += 1;
+//     guestScoreEl.textContent = guestScore;
+// })
+// guest2.addEventListener("click", function() {
+//     guestScore += 2;
+//     guestScoreEl.textContent = guestScore;
+// })
+// guest3.addEventListener("click", function() {
+//     guestScore += 3;
+//     guestScoreEl.textContent = guestScore;
+// })
 
 reset.addEventListener("click", function() {
     homeScore = 0;
     guestScore = 0;
     homeScoreEl.textContent = homeScore;
     guestScoreEl.textContent = guestScore;
+})
+
+// Above all was my raw logic now 
+// Let's get the enhanced logic
+
+function updateScore(team, points){
+    if(team === "home"){
+        homeScore += points;
+        homeScoreEl.textContent = homeScore;
+    } else {
+        guestScore += points;
+        guestScoreEl.textContent = guestScore;
+    }
+}
+
+// Listeners
+const homeButtons = [home1, home2, home3];
+const guestButtons = [guest1, guest2, guest3];
+// forEach buttons
+homeButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => updateScore("home", index + 1));
+});
+guestButtons.forEach((btn, index) => {
+    btn.addEventListener("click", () => updateScore("guest", index + 1))
 })

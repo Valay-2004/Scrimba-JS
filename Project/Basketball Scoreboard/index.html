@@ -11,20 +11,26 @@
 <body>
     <div class="display">
         <h1>🏀 Basketball Scoreboard 🏀</h1>
-        <section class="home">
-            <p>Home Points</p>
-            <button>+1</button>
-            <button>+2</button>
-            <button>+3</button>
-        </section>
-        <section class="guest">
-            <p>Guest Points</p>
-            <button>+1</button>
-            <button>+2</button>
-            <button>+3</button>
-        </section>
+        <div class="teams">
+            <section class="home">
+                <h2>Home</h2>
+                <p id="home-score">0</p>
+                <button id="home-1">+1</button>
+                <button id="home-2">+2</button>
+                <button id="home-3">+3</button>
+            </section>
+            <section class="guest">
+                <h2>Guest</h2>
+                <p id="guest-score">0</p>
+                <button id="guest-1">+1</button>
+                <button id="guest-2">+2</button>
+                <button id="guest-3">+3</button>
+            </section>
+        </div>
+
+        <button id="reset">Reset Game</button>
+    </div>
 </body>
-</div>
 
 <script src="script.js"></script>
 </body>

@@ -3,8 +3,6 @@
 
 let firstCard = Math.floor(Math.random() * 10 + 2);
 let secondCard = Math.floor(Math.random() * 10 + 2);
-console.log(firstCard);
-console.log(secondCard);
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 let sum = firstCard + secondCard;
@@ -24,12 +22,13 @@ if( sum < 21 ){
 // Check if the person is old enough to enter the nightclub (21)
 // Log a suitable message to the console in both cases
 let age = 22;
-// if(age < 21){
-//     console.log(`You cannot enter the club`);
-// } else{
-//     console.log(`Welcome!`)
-// }
+if(age < 21){
+    console.log(`You cannot enter the club`);
+} else{
+    console.log(`Welcome!`)
+}
 
+/*
 // Get a birthday card if age is 100
 // Check if the person is elegible for a birthday card from the King! (100)
 if( age < 100){
@@ -39,3 +38,4 @@ if( age < 100){
 } else {
     console.log(`Not eligible, you have already one`);
 }
+*/

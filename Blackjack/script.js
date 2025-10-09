@@ -1,8 +1,8 @@
 // 1. Create two variables, firstCard and secondCard.
 // Set their values to a random number between 2-11
 
-let firstCard = Math.floor(Math.random() * 10 + 2);
-let secondCard = Math.floor(Math.random() * 10 + 2);
+let firstCard = Math.floor(Math.random() * 10);
+let secondCard = Math.floor(Math.random() * 10 + 10);
 let hasBlackJack = false;
 let isAlive = true;
 let message = ""; // an empty string
@@ -10,25 +10,29 @@ let message = ""; // an empty string
 let sum = firstCard + secondCard;
 console.log(sum);
 
-// If-else statements
-if( sum < 21 ){
+// // Age Check
+// // Check if the person is old enough to enter the nightclub (21)
+// // Log a suitable message to the console in both cases
+// let age = 22;
+// if(age < 21){
+//     console.log(`You cannot enter the club`);
+// } else{
+//     console.log(`Welcome!`)
+// }
+
+// Create a startGame() function. Move the conditionals inside
+// the body of the function
+
+function startGame() {
+  // If-else statements
+  if (sum < 21) {
     message = `Do you want to draw a new card? 🙂`;
-} else if( sum === 21){
+  } else if (sum === 21) {
     message = `Wohooo!! You've got BlackJack! 🥇`;
-} else{
+  } else {
     message = `You're out of the game! 😭`;
     isAlive = false;
-}
+  }
 
-console.log(message);
-
-
-// Age Check
-// Check if the person is old enough to enter the nightclub (21)
-// Log a suitable message to the console in both cases
-let age = 22;
-if(age < 21){
-    console.log(`You cannot enter the club`);
-} else{
-    console.log(`Welcome!`)
+  console.log(message);
 }

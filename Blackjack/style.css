@@ -6,15 +6,21 @@ body{
     flex-direction: column;
     height: 100vh;
     background-image: url(./Poker_Table.jpg);
+    background-size: cover;
+    color: white;
+    font-weight: bold;
 }
 
 h1{
     color: goldenrod;
-    font-weight: bolder;
-    font-size: 50px;
 }
 
 #message-el{
-    font-size: xx-large;
+    font-style: italic;
+}
 
+button{
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
 }

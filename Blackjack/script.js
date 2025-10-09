@@ -28,6 +28,8 @@ if(age < 21){
     console.log(`Welcome!`)
 }
 
+// CASH OUT!
+let hasBlackJack = false;
 /*
 // Get a birthday card if age is 100
 // Check if the person is elegible for a birthday card from the King! (100)

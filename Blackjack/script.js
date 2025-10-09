@@ -3,7 +3,8 @@
 
 let firstCard = Math.floor(Math.random() * 10 + 2);
 let secondCard = Math.floor(Math.random() * 10 + 2);
-
+let hasBlackJack = false;
+let isAlive = true;
 // 2. Create a variable, sum, and set it to the sum of the two cards
 let sum = firstCard + secondCard;
 console.log(sum);
@@ -15,6 +16,7 @@ if( sum < 21 ){
     console.log(`Wohooo!! You've got BlackJack! 🥇`);
 } else{
     console.log(`You're out of the game! 😭`);
+    isAlive = false;
 }
 
 
@@ -27,17 +29,3 @@ if(age < 21){
 } else{
     console.log(`Welcome!`)
 }
-
-// CASH OUT!
-let hasBlackJack = false;
-/*
-// Get a birthday card if age is 100
-// Check if the person is elegible for a birthday card from the King! (100)
-if( age < 100){
-    console.log(`Not eligible`);
-} else if(age === 100){
-    console.log(`Here is your birthday card from the King!`);
-} else {
-    console.log(`Not eligible, you have already one`);
-}
-*/

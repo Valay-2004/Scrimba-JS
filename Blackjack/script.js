@@ -8,7 +8,13 @@ let hasBlackJack = false;
 let isAlive = true;
 console.log(sum);
 
-function startGame() {
+// Create a new function called startGame() that calls 
+// renderGame()
+function startGame(){
+  renderGame();
+}
+
+function renderGame() {
   // If-else statements
   cardsEl.textContent = `Cards: ${firstCard}  ${secondCard}`;
   sumEl.textContent = `Sum: ${sum}`;
@@ -25,8 +31,11 @@ function startGame() {
   console.log(message);
 }
 
-// 2. Create a function newCard() that logs out 
+//Create a function newCard() that logs out 
 // "Drawing a new card from the deck!"
 function newCard(){
+  let card = Math.floor(Math.random() * 10 + 2);
+  console.log(card);
+  sum += card;
   console.log("Drawing a new card from the deck");
 }

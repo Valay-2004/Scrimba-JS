@@ -39,5 +39,6 @@ function newCard(){
   let card = Math.floor(Math.random() * 10 + 2);
   console.log(card);
   sum += card;
-  console.log("Drawing a new card from the deck");
+  cards.push(card);
+  renderGame();
 }

@@ -16,9 +16,11 @@ function startGame(){
 }
 
 function renderGame() {
-  // render out firstCard and secondCard
-  cardsEl.textContent = `Cards: ${cards[0]}  ${cards[1]}`;
-  // render out ALL the cards we have
+  cardsEl.textContent = `Cards: `;
+  // Create a for loop that renders out all the cards instead of just two
+  cards.forEach(element => {
+    cardsEl.textContent += element + " ";
+  });
   sumEl.textContent = `Sum: ${sum}`;
   if (sum < 21) {
     message = `Do you want to draw a new card?`;

@@ -1,14 +1,18 @@
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
-let firstCard = Math.floor(Math.random() * 10 + 2);
-let secondCard = Math.floor(Math.random() * 10 + 2);
+let firstCard = getRandom();
+let secondCard = getRandom();
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 console.log(sum);
 
+function getRandom(){
+  let random = Math.floor(Math.random() * 10 + 2);
+  return random;
+}
 // Create a new function called startGame() that calls 
 // renderGame()
 function startGame(){
@@ -38,7 +42,7 @@ function renderGame() {
 //Create a function newCard() that logs out 
 // "Drawing a new card from the deck!"
 function newCard(){
-  let card = Math.floor(Math.random() * 10 + 2);
+  let card = getRandom();
   console.log(card);
   sum += card;
   cards.push(card);

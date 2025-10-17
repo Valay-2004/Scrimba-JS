@@ -4,7 +4,7 @@ let cardsEl = document.getElementById("cards-el");
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 console.log(sum);
 
 function getRandomCard() {
@@ -14,6 +14,12 @@ function getRandomCard() {
 // Create a new function called startGame() that calls
 // renderGame()
 function startGame() {
+  isAlive = true;
+  // Generate two random number
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  // Re-assign the cards and sum variables so that the game can start
+  sum += firstCard + secondCard;
   renderGame();
 }
 

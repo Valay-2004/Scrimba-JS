@@ -17,3 +17,5 @@ const logData = () => {
 
 // Call the logData() function to verify that it works
 logData();
+
+// Task completed

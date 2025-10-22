@@ -1,36 +1,35 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url(./Poker_Table.jpg);
-    background-size: cover;
-    color: white;
-    font-weight: bold;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(./Poker_Table.jpg);
+  background-size: cover;
+  color: white;
+  font-weight: bold;
 }
 
-h1{
-    color: goldenrod;
+h1 {
+  color: goldenrod;
 }
 
-#message-el{
-    font-style: italic;
+#message-el {
+  font-style: italic;
 }
 
 /*Make sure that the two buttons have some space between 
 each other when they are rendered out vertically */
-button{
-    color: #016f32;
-    width: 150px;
-    background: goldenrod;
-    padding: 5px;
-    border: 1px solid;
-    border-radius: 3px;
-    text-align: center;
-    margin-top: 4px;
-    margin-bottom: 5px;
+button {
+  color: #016f32;
+  width: 150px;
+  background: goldenrod;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 5px;
 }
-
-

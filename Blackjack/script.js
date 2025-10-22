@@ -1,4 +1,3 @@
-// 2. Create the player object. Give it two keys, name and chips, and set their values
 const player = {
   name: "Valay",
   chips: 120,
@@ -11,16 +10,14 @@ let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
 
-// 3. Grab a hold of the player-el paragraph and store it in a variable called playerEl
 let playerEl = document.getElementById("player-el");
-// 4. Render the players name and chips in playerEl
 playerEl.textContent = `${player.name}: $${player.chips}`;
+
 function getRandomCard() {
   let random = Math.floor(Math.random() * 10 + 2);
   return random;
 }
-// Create a new function called startGame() that calls
-// renderGame()
+
 function startGame() {
   isAlive = true;
   // Generate two random number
@@ -53,8 +50,6 @@ function renderGame() {
   console.log(message);
 }
 
-//Create a function newCard() that logs out
-// "Drawing a new card from the deck!"
 function newCard() {
   // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
   if (isAlive && !hasBlackJack) {

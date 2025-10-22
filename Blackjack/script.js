@@ -62,3 +62,5 @@ function newCard() {
     console.log("Is either a winner or looser");
   }
 }
+
+// Will add some objects for better use

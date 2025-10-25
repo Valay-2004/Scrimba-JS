@@ -6,7 +6,7 @@ let orangeShelfEl = document.getElementById("orange-shelf");
 // and the oranges onto the orangeShelf. Use a for loop,
 // a conditional statement, and the textContent property.
 
-function putFruit(fruit) {
+function sortFruit(fruit) {
   fruit.forEach((element) => {
     if (element === "🍎") {
       appleShelfEl.textContent += element;

@@ -16,4 +16,4 @@ function sortFruit(fruit) {
   });
 }
 
-putFruit(fruit);
+sortFruit(fruit);

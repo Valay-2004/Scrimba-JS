@@ -10,7 +10,9 @@ green color -> #5f9341
 
 input {
   border: 1px #5f9341 solid;
-  padding: 5px 15px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 button {
@@ -18,5 +20,6 @@ button {
   border: none;
   color: white;
   font-weight: bold;
-  padding: 6px 15px;
+  padding: 10px 20px;
+  margin-top: 5px;
 }

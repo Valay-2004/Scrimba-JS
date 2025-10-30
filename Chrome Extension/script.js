@@ -1,14 +1,13 @@
 const inputEl = document.getElementById("input-el");
 const saveEl = document.getElementById("save-el");
+const ulEl = document.getElementById("ul-el");
 let myLeads = [
   "www.example.com",
   "www.awesomelead.com",
   "www.epiclead.com",
   "www.greatlead.com",
+  "https://music.youtube.com",
 ];
-
-// Grab the unordered list and store it in a const variable called ulEl
-const ulEl = document.getElementById("ul-el");
 
 saveEl.addEventListener("click", () => {
   console.log(`button clicked`);
@@ -16,7 +15,8 @@ saveEl.addEventListener("click", () => {
   console.log(myLeads);
 });
 
-// Log out the items in the myLeads array using a for loop
+// Render the leads in the unordered list using ulEl.textContent
 myLeads.forEach((element) => {
+  ulEl.innerHTML += `<li> ${element} </li>`;
   console.log(element);
 });

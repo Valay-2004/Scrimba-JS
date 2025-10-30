@@ -1,6 +1,5 @@
 const inputEl = document.getElementById("input-el");
 const saveEl = document.getElementById("save-el");
-
 let myLeads = [
   "www.example.com",
   "www.awesomelead.com",
@@ -8,7 +7,8 @@ let myLeads = [
   "www.greatlead.com",
 ];
 
-// Push the value "www.awsomelead.com" to myAray when the input button is clicked
+// Grab the unordered list and store it in a const variable called ulEl
+const ulEl = document.getElementById("ul-el");
 
 saveEl.addEventListener("click", () => {
   console.log(`button clicked`);

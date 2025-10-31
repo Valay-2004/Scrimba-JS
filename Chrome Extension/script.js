@@ -15,8 +15,16 @@ saveEl.addEventListener("click", () => {
   console.log(myLeads);
 });
 
+// 1. Create a variable, listItems,
+// to hold all the HTML for the list items
+// Assign it to an empty string to begin with
+let listItems = "";
+
 // Render the leads in the unordered list using ulEl.textContent
-myLeads.forEach((element) => {
-  ulEl.innerHTML += `<li> ${element} </li>`;
-  console.log(element);
-});
+for (let i = 0; i < myLeads.length; i++) {
+  // 2. Add the item to the listItem variable instead of the ulEl.innerHTML
+  listItems += "<li>" + myLeads[i] + "</li>";
+}
+
+// 3. Render the listItem inside the unordered list using ulEl.innerHTMl
+ulEl.innerHTML = listItems;

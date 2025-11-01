@@ -3,6 +3,15 @@ const saveEl = document.getElementById("save-el");
 const ulEl = document.getElementById("ul-el");
 let myLeads = [];
 
+// Indian date format for the links
+const currentDate = new Date();
+const indianDateFormat = new Intl.DateTimeFormat("en-IN", {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+  timeZone: "Asia/Kolkata",
+}).format(currentDate);
+
 saveEl.addEventListener("click", () => {
   myLeads.push(inputEl.value);
   renderLeads();
@@ -13,10 +22,7 @@ saveEl.addEventListener("click", () => {
 const renderLeads = () => {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
-    // Wrap the lead in an anchor tag (<a>) inside the <li>
-    // Can you make the link open in a new tab?
-
-    listItems += `<li> <a href="${myLeads[i]}" target="_blank"> ${myLeads[i]} </a> </li>`;
+    listItems += `<li> &rarr; &nbsp; <a href="${myLeads[i]}" target="_blank"> ${myLeads[i]} </a> &nbsp; [${indianDateFormat}] </li>`;
   }
   ulEl.innerHTML = listItems;
 };

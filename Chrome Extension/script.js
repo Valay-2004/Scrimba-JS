@@ -14,8 +14,13 @@ const indianDateFormat = new Intl.DateTimeFormat("en-IN", {
 
 saveEl.addEventListener("click", () => {
   myLeads.push(inputEl.value);
-  renderLeads();
   inputEl.value = "";
+
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+
+  renderLeads();
+
+  console.log(localStorage.getItem("myLeads"));
   console.log(myLeads);
 });
 

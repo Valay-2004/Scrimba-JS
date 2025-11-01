@@ -23,3 +23,14 @@ button {
   padding: 10px 20px;
   margin-top: 5px;
 }
+
+a {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  color: #555;
+}
+a:visited {
+  color: #989898;
+}

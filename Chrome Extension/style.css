@@ -17,13 +17,19 @@ input {
 }
 
 button {
-  background-color: #5f9341;
-  border: none;
+  background: #5f9341;
+  border: 1px solid #5f9341;
   color: white;
   font-weight: bold;
   padding: 10px 20px;
   margin-top: 5px;
 }
+
+#del-btn {
+  background: white;
+  color: #5f9341;
+}
+
 ul {
   margin-top: 20px;
   list-style: none;

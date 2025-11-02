@@ -12,6 +12,13 @@ const indianDateFormat = new Intl.DateTimeFormat("en-IN", {
   timeZone: "Asia/Kolkata",
 }).format(currentDate);
 
+let localItem = JSON.parse(localStorage.getItem("myLeads"));
+
+if (localItem) {
+  myLeads = localItem;
+  renderLeads();
+}
+
 saveEl.addEventListener("click", () => {
   myLeads.push(inputEl.value);
   inputEl.value = "";
@@ -19,15 +26,12 @@ saveEl.addEventListener("click", () => {
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
   renderLeads();
-
-  console.log(localStorage.getItem("myLeads"));
-  console.log(myLeads);
 });
 
-const renderLeads = () => {
+function renderLeads() {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
     listItems += `<li> &rarr; &nbsp; <a href="${myLeads[i]}" target="_blank"> ${myLeads[i]} </a> &nbsp; [${indianDateFormat}] </li>`;
   }
   ulEl.innerHTML = listItems;
-};
+}

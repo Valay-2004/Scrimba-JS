@@ -1,6 +1,7 @@
 const inputEl = document.getElementById("input-el");
 const saveEl = document.getElementById("save-el");
 const ulEl = document.getElementById("ul-el");
+const delEl = document.getElementById("del-btn");
 let myLeads = [];
 
 // Indian date format for the links
@@ -12,19 +13,23 @@ const indianDateFormat = new Intl.DateTimeFormat("en-IN", {
   timeZone: "Asia/Kolkata",
 }).format(currentDate);
 
-let localItem = JSON.parse(localStorage.getItem("myLeads"));
+const localItem = JSON.parse(localStorage.getItem("myLeads"));
 
 if (localItem) {
   myLeads = localItem;
   renderLeads();
 }
 
+delEl.addEventListener("dblclick", () => {
+  localStorage.clear();
+  myLeads = [];
+  renderLeads();
+});
+
 saveEl.addEventListener("click", () => {
   myLeads.push(inputEl.value);
   inputEl.value = "";
-
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
-
   renderLeads();
 });
 

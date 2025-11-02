@@ -3,6 +3,7 @@ const saveEl = document.getElementById("save-el");
 const ulEl = document.getElementById("ul-el");
 const delEl = document.getElementById("del-btn");
 let myLeads = [];
+let oldLeads = [];
 
 // Indian date format for the links
 const currentDate = new Date();
@@ -17,7 +18,15 @@ const localItem = JSON.parse(localStorage.getItem("myLeads"));
 
 if (localItem) {
   myLeads = localItem;
-  renderLeads();
+  renderLeads(myLeads);
+}
+
+function renderLeads(leads) {
+  let listItems = "";
+  for (let i = 0; i < leads.length; i++) {
+    listItems += `<li> &rarr; &nbsp; <a href="${leads[i]}" target="_blank"> ${leads[i]} </a> &nbsp; [${indianDateFormat}] </li>`;
+  }
+  ulEl.innerHTML = listItems;
 }
 
 delEl.addEventListener("dblclick", () => {
@@ -32,11 +41,3 @@ saveEl.addEventListener("click", () => {
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
   renderLeads();
 });
-
-function renderLeads() {
-  let listItems = "";
-  for (let i = 0; i < myLeads.length; i++) {
-    listItems += `<li> &rarr; &nbsp; <a href="${myLeads[i]}" target="_blank"> ${myLeads[i]} </a> &nbsp; [${indianDateFormat}] </li>`;
-  }
-  ulEl.innerHTML = listItems;
-}

@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "version": "0.1",
   "name": "Link Saver",
+  "description": "This is a chrome extenstion I made while following the Scrimba JS path",
   "action": {
     "default_popup": "index.html",
     "default_icon": "icon.png"

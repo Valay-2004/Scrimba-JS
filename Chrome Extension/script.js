@@ -22,11 +22,11 @@ if (localItem) {
 }
 
 tabEl.addEventListener("click", () => {
-  let pageLink = "";
-  pageLink = window.location.href;
-  myLeads.push(pageLink);
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  renderLeads(myLeads);
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    renderLeads(myLeads);
+  });
 });
 
 function renderLeads(leads) {

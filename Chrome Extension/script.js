@@ -2,8 +2,8 @@ const inputEl = document.getElementById("input-el");
 const saveEl = document.getElementById("save-el");
 const ulEl = document.getElementById("ul-el");
 const delEl = document.getElementById("del-btn");
+const tabEl = document.getElementById("tab-btn");
 let myLeads = [];
-let oldLeads = [];
 
 // Indian date format for the links
 const currentDate = new Date();
@@ -21,6 +21,14 @@ if (localItem) {
   renderLeads(myLeads);
 }
 
+tabEl.addEventListener("click", () => {
+  let pageLink = "";
+  pageLink = window.location.href;
+  myLeads.push(pageLink);
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  renderLeads(myLeads);
+});
+
 function renderLeads(leads) {
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
@@ -32,12 +40,12 @@ function renderLeads(leads) {
 delEl.addEventListener("dblclick", () => {
   localStorage.clear();
   myLeads = [];
-  renderLeads();
+  renderLeads(myLeads);
 });
 
 saveEl.addEventListener("click", () => {
   myLeads.push(inputEl.value);
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  renderLeads();
+  renderLeads(myLeads);
 });

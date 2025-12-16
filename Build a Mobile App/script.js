@@ -3,6 +3,7 @@ import {
   getDatabase,
   ref,
   push,
+  remove,
   onValue,
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-database.js";
 
@@ -12,15 +13,24 @@ const firebaseConfig = {
     "https://leads-tracker-app-7a922-default-rtdb.asia-southeast1.firebasedatabase.app/",
 };
 // Initialize Firebase
+// App
 const app = initializeApp(firebaseConfig);
+// Database
 const database = getDatabase(app);
 console.log(database);
 
-// Challenge: Create a const called 'referenceInDB' and use the ref function to create a reference called 'leads' in the database
+// a const called 'referenceInDB' and use the ref function to create a reference called 'leads' in the database
 const referenceInDB = ref(database, "leads");
 
+// onValue gives us the snapshot of the things in our database
 onValue(referenceInDB, function (snapshot) {
-  console.log(snapshot.val());
+  // check if the snapshot exists if not so there is nothing in db
+  if (snapshot.exists()) {
+    const snapshotValues = snapshot.val();
+    // we convert arrays of the data to object and render it using the render function
+    const leads = Object.values(snapshotValues);
+    render(leads);
+  }
 });
 
 const inputEl = document.getElementById("input-el");
@@ -42,7 +52,10 @@ function render(leads) {
   ulEl.innerHTML = listItems;
 }
 
-deleteBtn.addEventListener("dblclick", function () {});
+deleteBtn.addEventListener("dblclick", function () {
+  remove(referenceInDB);
+  ulEl.innerHTML = "";
+});
 
 inputBtn.addEventListener("click", function () {
   console.log(inputEl.value);

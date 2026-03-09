@@ -1,13 +1,21 @@
 Scrimba JavaScript Practice Projects
 
-Purpose
-- A compact collection of small JavaScript, HTML, and CSS exercises and projects completed while following Scrimba lessons.
+Overview
+- Collection of small, self-contained HTML/CSS/JS projects completed while following Scrimba lessons.
 
-Contents
-- Each folder is a standalone project (HTML, CSS, JS). Examples: Blackjack, People Counter, Practices, Project.
+Repository structure
+- Each folder is a standalone project (typically `index.html`, `script.js`, `style.css`).
 
-How to run
-- Open a project's folder and open `index.html` in a web browser.
+Notable projects
+- Blackjack, People Counter, Basketball Scoreboard, Password Generator, Practice exercises.
+
+Run locally
+- Open the project's `index.html` in a browser, or serve the folder with a simple HTTP server, for example:
+
+	`python3 -m http.server`
 
 Contributing
-- Add new exercises as separate folders and keep files self-contained.
+- Add new exercises as their own folders. Include a short README in the project folder when helpful.
+
+Notes
+- Projects are small learning exercises; keep files self-contained and clearly named.
